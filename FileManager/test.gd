@@ -30,10 +30,12 @@ func get_target_file_path_demo() -> void:
 	
 func cfg_demo() -> void:
 	var dict: Dictionary = {
-		name = "gugu",
-		age = 16,
-		weapon = "long_sword2"
+		"gugu": {
+			name = "gugu",
+			age = 16,
+			weapon = "long_sword2"
+		}
 	}
-	var path: String = "res://演示文件.cfg"
-	#ConfigFileManager.overwrite_section(path,"gugu",dict)
-	ConfigFileManager.save_section_dict(path, "gugu", dict)
+	var path: String = "res://FileManager/演示文件.cfg"
+	#ConfigFileManager.overwrite_cfg(path,"gugu",dict)
+	ConfigFileManager.save_nested_dict(path, dict)
