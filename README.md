@@ -36,7 +36,7 @@ var data = ConfigFileManager.load_section_dict("res://config.cfg", "玩家")
 
 ## 📺 关于作者
 
-**B站ID：[小爱孤辰](https://space.bilibili.com/小爱孤辰)** 🎮
+**B站ID：[小爱孤辰](https://space.bilibili.com/30337799)** 🎮
 
 不定期分享 Godot 开发相关的内容，欢迎关注！
 
