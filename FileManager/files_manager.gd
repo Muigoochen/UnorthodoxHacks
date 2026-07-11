@@ -17,6 +17,14 @@ const _UNIX_OS_SET: Dictionary = {
 	"macOS": true,
 	"Linux": true,
 }
+## Windows 保留名称集合，用于O(1)哈希查找
+const RESERVED_NAMES: Dictionary = {
+	"CON": true, "PRN": true, "AUX": true, "NUL": true,
+	"COM1": true, "COM2": true, "COM3": true, "COM4": true,
+	"COM5": true, "COM6": true, "COM7": true, "COM8": true, "COM9": true,
+	"LPT1": true, "LPT2": true, "LPT3": true, "LPT4": true,
+	"LPT5": true, "LPT6": true, "LPT7": true, "LPT8": true, "LPT9": true,
+}
 #endregion
 #region -------- 文件操作 --------
 ## 按路径创建新的空文件，仅支持绝对路径
@@ -558,14 +566,6 @@ static func fix_path(text: String) -> String:
 ## 检查是否是Windows保留名称（如CON, PRN, AUX等）
 ## @param text: 输入文本
 ## @return: 是否是Windows保留名称
-const RESERVED_NAMES: Dictionary = {
-	"CON": true, "PRN": true, "AUX": true, "NUL": true,
-	"COM1": true, "COM2": true, "COM3": true, "COM4": true,
-	"COM5": true, "COM6": true, "COM7": true, "COM8": true, "COM9": true,
-	"LPT1": true, "LPT2": true, "LPT3": true, "LPT4": true,
-	"LPT5": true, "LPT6": true, "LPT7": true, "LPT8": true, "LPT9": true,
-}
-
 static func is_windows_reserved_name(text: String) -> bool:
 	return RESERVED_NAMES.has(text.to_upper())
 
