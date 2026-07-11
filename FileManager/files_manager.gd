@@ -558,13 +558,16 @@ static func fix_path(text: String) -> String:
 ## 检查是否是Windows保留名称（如CON, PRN, AUX等）
 ## @param text: 输入文本
 ## @return: 是否是Windows保留名称
+const RESERVED_NAMES: Dictionary = {
+	"CON": true, "PRN": true, "AUX": true, "NUL": true,
+	"COM1": true, "COM2": true, "COM3": true, "COM4": true,
+	"COM5": true, "COM6": true, "COM7": true, "COM8": true, "COM9": true,
+	"LPT1": true, "LPT2": true, "LPT3": true, "LPT4": true,
+	"LPT5": true, "LPT6": true, "LPT7": true, "LPT8": true, "LPT9": true,
+}
+
 static func is_windows_reserved_name(text: String) -> bool:
-	var reserved_names: Array = [
-		"CON", "PRN", "AUX", "NUL",
-		"COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9",
-		"LPT1", "LPT2", "LPT3", "LPT4", "LPT5", "LPT6", "LPT7", "LPT8", "LPT9"
-	]
-	return text.to_upper() in reserved_names
+	return RESERVED_NAMES.has(text.to_upper())
 
 ## 根据路径获取文件名或者目录名
 ## @param path: 路径
