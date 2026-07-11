@@ -1,0 +1,26 @@
+{
+	"godotTools.editorPath.godot4": "j:\\Godot Engine\\Godot_v4.7-stable_mono_win64\\Godot_v4.7-stable_mono_win64.exe",
+	"files.associations": {
+		"*.py": "python"
+	},
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/*.uid": true,
+		"**/*.import": true
+	},
+	"godotTools.languageServer.enableGDScriptSyntaxCheck": false,
+	"godotTools.languageServer.fileExtensions": [
+		".gd"
+	],
+	"editor.matchBrackets": "always",
+	"editor.suggest.matchOnWordStartOnly": false,
+	"workbench.experimental.cloudChanges.partialMatches.enabled": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"todo-tree.tree.showBadges": false,
+	"todo-tree.tree.scanMode": "current file"
+}
