@@ -37,5 +37,5 @@ func cfg_demo() -> void:
 		}
 	}
 	var path: String = "res://FileManager/演示文件.cfg"
-	#ConfigFileManager.overwrite_cfg(path,"gugu",dict)
-	ConfigFileManager.save_nested_dict(path, dict)
+	ConfigFileManager.overwrite_cfg(path,dict)
+	#ConfigFileManager.save_nested_dict(path, dict)
